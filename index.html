@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple Drag & Drop To-Do</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <h1>To‑Do List (drag & drop)</h1>
+
+    <form id="task-form" class="task-form" onsubmit="return false;">
+      <input id="task-input" type="text" placeholder="Add a new task..." autocomplete="off" />
+      <button id="add-btn" type="button">Add</button>
+    </form>
+
+    <section class="boards">
+      <div class="board" id="todo-board">
+        <h2>To Do</h2>
+        <div class="dropzone" id="todo-list" data-list="todo"></div>
+      </div>
+
+      <div class="board" id="done-board">
+        <h2>Done</h2>
+        <div class="dropzone" id="done-list" data-list="done"></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <button id="clear-btn">Clear All</button>
+      <span class="hint">Tasks are saved in your browser (localStorage).</span>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
